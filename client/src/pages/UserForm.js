@@ -62,32 +62,32 @@ export function UserForm() {
         
           <h2 className='text-center'>Crear nuevo usuario</h2>
 
-          <p className='text-center text-black' >Dia y hora de atención para recogida y envio:</p>
-            <Field name='horario' className="form-control mx-auto"style={{width: 310}} placeholder='14/12/22 7am-9am'/>
+          <p className='text-center  text-black' >Dia y hora de atención para recogida y envio:</p>
+            <Field name='horario' className="form-control border border-primary mx-auto"style={{width: 310}} placeholder='14/12/22 7am-9am'/>
             <ErrorMessage component='p'  className="mx-auto alert alert-primary"style={{width: 280}} name='horario'/>
           
-          <p className='text-center text-black' >Nombre completo de quien envia</p>
-          <Field  className="form-control mx-auto "style={{width: 310}}name='username' placeholder='Alex Javier Ramos Silva'/>
-          <ErrorMessage component='p' className="mx-auto alert alert-danger"style={{width: 280}} name='username'/>
+          <p className='text-center  text-black' >Nombre completo de quien envia</p>
+          <Field  className="form-control border border-primary mx-auto "style={{width: 310}}name='username' placeholder='Alex Javier Ramos Silva'/>
+          <ErrorMessage component='p' className="mx-auto border border-primary alert alert-danger"style={{width: 280}} name='username'/>
 
           <p className='text-center text-black' >Identificacion de quien envia</p>
-            <Field  className="form-control mx-auto"style={{width: 310}}name='identif' placeholder='Identificacion de quien envia'/>
-            <ErrorMessage component='p'className="mx-auto alert alert-primary"style={{width: 280}} name='identif'/>
+            <Field  className="form-control border border-primary mx-auto"style={{width: 310}}name='identif' placeholder='Identificacion de quien envia'/>
+            <ErrorMessage component='p'className="mx-auto border border-primary alert alert-primary"style={{width: 280}} name='identif'/>
 
             <p className='text-center text-black' >Direccion de quien envia</p>
-            <Field  className="form-control mx-auto" style={{width: 310}} name='direccionenv' placeholder='carrera 23#13-1'/>
+            <Field  className="form-control border border-primary mx-auto" style={{width: 310}} name='direccionenv' placeholder='carrera 23#13-1'/>
             <ErrorMessage component='p'className="mx-auto alert alert-primary" style={{width: 280}}name='direccionenv'/>
 
             <p className='text-center text-black' >ciudad de quien envia</p>
-            <Field  className="form-control mx-auto"style={{width: 310}}name='ciudadenv' placeholder='Bogotá'/>
+            <Field  className="form-control border border-primary mx-auto"style={{width: 310}}name='ciudadenv' placeholder='Bogotá'/>
             <ErrorMessage component='p'className="mx-auto alert alert-primary"style={{width: 280}} name='ciudadenv'/>
             
-           
+            <br/>
             
-            <button type="submit" className="mx-auto btn btn-primary"
+            <p className='text-center'><button type="submit" className="mx-auto btn btn-primary"
             onClick={()=> toast.success('Usuario guardado')}
             >Guardar usuario</button>
-            
+            </p>
             <div  className="rounded-pill bg-light text-dark text-justify text-center">
               {users.map(user=>(
               <div key={user._id}>

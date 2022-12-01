@@ -62,35 +62,35 @@ export function FechasForm() {
                 </div>
        
           <p className='text-center' >Nombre completo de quien recoge</p>
-          <Field name='nombre'className="mx-auto form-control text center"style={{width: 245}} placeholder='Alex Javier Ramos Silva'/>
-          <ErrorMessage component='p'  className="alert alert-primary"style={{width: 245}} name='nombre'/>
+          <Field name='nombre'className="mx-auto border border-primary form-control text center"style={{width: 245}} placeholder='Alex Javier Ramos Silva'/>
+          <ErrorMessage component='p'  className="mx -auto alert alert-primary"style={{width: 245}} name='nombre'/>
 
           <p className='text-center' >Dimensiones del paquete (cm)</p>
-            <Field name='dimensiones' className="mx-auto form-control text center"style={{width: 245}}placeholder='40x15x20'/>
+            <Field name='dimensiones' className="mx-auto border border-primary form-control text center"style={{width: 245}}placeholder='40x15x20'/>
             <ErrorMessage component='p'  className="alert alert-primary"style={{width: 245}} name='dimensiones'/>
 
             <p className='text-center' >Peso (kg)</p>
-            <Field name='peso' className="mx-auto form-control text center"style={{width: 245}}placeholder='20 kg'/>
+            <Field name='peso' className="mx-auto border border-primary form-control text center"style={{width: 245}}placeholder='20 kg'/>
             <ErrorMessage component='p'  className="alert alert-primary"style={{width: 245}} name='peso'/>
 
           <p className='text-center' >Identificacion de quien envia</p>
-            <Field name='identi' className="mx-auto form-control text center"style={{width: 245}}placeholder='Identificacion de quien envia'/>
+            <Field name='identi' className="mx-auto border border-primary form-control text center"style={{width: 245}}placeholder='Identificacion de quien envia'/>
             <ErrorMessage component='p'  className="alert alert-primary"style={{width: 245}} name='identi'/>
 
             <p className='text-center' >Direccion de quien envia</p>
-            <Field name='direccion' className="mx-auto form-control text center"style={{width: 245}}placeholder='carrera 23#13-1'/>
+            <Field name='direccion' className="mx-auto border border-primary form-control text center"style={{width: 245}}placeholder='carrera 23#13-1'/>
             <ErrorMessage component='p'  className="alert alert-primary"style={{width: 245}}name='direccion'/>
 
             <p className='text-center' >ciudad de quien envia</p>
-            <Field name='ciudad' className="mx-auto form-control text center"style={{width: 245}} placeholder='Bogotá'/>
+            <Field name='ciudad' className="border border-primary mx-auto form-control text center"style={{width: 245}} placeholder='Bogotá'/>
             <ErrorMessage component='p'  className="alert alert-primary"style={{width: 245}} name='ciudad'/>
            
-        
+            <br/>
            
-            <button type="submit" className="btn btn-primary align-text-bottom"
+            <p className='text-center'><button type="submit" className="btn btn-primary align-text-bottom"
             onClick={()=> toast.success('Fecha agregada')}
             >Guardar fecha
-            </button>
+            </button></p>
             
             
          <br/>
