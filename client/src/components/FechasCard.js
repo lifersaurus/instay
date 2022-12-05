@@ -35,25 +35,27 @@ export function FechasCard({fecha, user}){
 </div>
 
 </form>
-       
                 
                
                 <div class="card-body text-primary">
                 <h5 className="card-title">DATOS DE QUIEN ENVIA</h5>
                 <div  >
-
-              {users.map(user=>(
+                if 
+                {users.map(user=>(
               <div key={user._id}>
                  <p className="card-text "> Nombre: {user.username}</p>
-                <p className="card-text"> Identificacion: {user.identif}</p>    
+                <p className="card-text"> Identificacion: {user.identif}</p>
                 <p className="card-text"> Direccion: {user.direccionenv}</p>
                   <p className="card-text"> Nombre: {user.ciudadenv}</p>
                   <p className="card-text"> Horario: {user.horario}</p>
-                  
+
             </div>
-      
-        
+
+
          ))}
+         
+                 <p className="card-text "> Nombre: {fecha.author}</p>
+                
          </div>
          <h5 className="card-title">DATOS DE QUIEN RECIBE</h5>
                 

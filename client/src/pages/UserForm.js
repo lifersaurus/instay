@@ -44,10 +44,10 @@ export function UserForm() {
         validationSchema={Yup.object({
           
           username: Yup.string().required("nombre requerido"),
-          identif:Yup.string().required("identifiacion requerido").max(10),
+          identif:Yup.string().required("identifiacion requerida").max(10),
           direccionenv:Yup.string().required("direccion requerida"),
           ciudadenv:Yup.string().required("ciudad requerida"),
-          horario:Yup.string().required("Horario requerida")
+          horario:Yup.string().required("Horario requerido")
         })}
         onSubmit={async(values, actions)=>{
           
@@ -68,11 +68,11 @@ export function UserForm() {
           
           <p className='text-center  text-black' >Nombre completo de quien envia</p>
           <Field  className="form-control border border-primary mx-auto "style={{width: 310}}name='username' placeholder='Alex Javier Ramos Silva'/>
-          <ErrorMessage component='p' className="mx-auto border border-primary alert alert-danger"style={{width: 280}} name='username'/>
+          <ErrorMessage component='p' className="mx-auto alert alert-danger"style={{width: 280}} name='username'/>
 
           <p className='text-center text-black' >Identificacion de quien envia</p>
             <Field  className="form-control border border-primary mx-auto"style={{width: 310}}name='identif' placeholder='Identificacion de quien envia'/>
-            <ErrorMessage component='p'className="mx-auto border border-primary alert alert-primary"style={{width: 280}} name='identif'/>
+            <ErrorMessage component='p'className="mx-auto alert alert-primary"style={{width: 280}} name='identif'/>
 
             <p className='text-center text-black' >Direccion de quien envia</p>
             <Field  className="form-control border border-primary mx-auto" style={{width: 310}} name='direccionenv' placeholder='carrera 23#13-1'/>

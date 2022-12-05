@@ -1,3 +1,4 @@
+import { db } from "moongose/models/user_model"
 import { useState, createContext, useContext, useEffect } from "react"
 
 import {getUsersRequests, createUserRequest, deleteUserRequest} from '../api/Users'
@@ -22,7 +23,14 @@ export const UsersProvider = ({ children }) => {
     if (res.status===204){
     setUsers (users.filter(user=>user._id !==id))
     }
+ 
   }
+
+    
+ 
+  
+    
+  
   const createUser=async(user)=>{
    
     const res=await createUserRequest(user)

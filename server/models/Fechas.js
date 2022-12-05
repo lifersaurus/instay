@@ -29,9 +29,11 @@ const fechaSchema =new mongoose.Schema({
     ciudad: {type: String ,
         require:true,
         trim:true
+    },
+    author: {type: String ,
+        require:true,
+        trim:true
     }
-
-
     
    
 },

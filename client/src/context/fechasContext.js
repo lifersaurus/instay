@@ -25,6 +25,7 @@ const deleteFecha=async id=>{
   const createFecha= async(fecha)=>{
    
     const res=await createFechaRequest(fecha)
+      console.log(res.data)
       setFechas([...fechas, res.data])
 
   }

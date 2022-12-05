@@ -1,10 +1,12 @@
 import {useFechas} from "../context/fechasContext"
+import {useUsers} from "../context/userContext"
 import { FechasCard } from '../components/FechasCard'
 
 
 export function HomePage() {
   
 const {fechas}=useFechas()
+
 
 if (fechas.length ===0) 
 return(
@@ -21,11 +23,15 @@ return(
     <div  className="row align-items-center row justify-content-evenly">
       {fechas.map(fecha=>(
         <FechasCard fecha={fecha} key={fecha}/>
+        
+        
       
         
         
          ))}
+      
      </div>
+     
         
     
   )

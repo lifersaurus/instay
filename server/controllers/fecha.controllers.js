@@ -1,5 +1,8 @@
-
+import Users from '../models/Users.js'
 import Fechas from '../models/Fechas.js'
+const {content, important=false, userId}=request.body
+
+const user=await Users.findById(userId)
 
 export const getFechas= async (req, res)=>{
     try{
@@ -14,8 +17,13 @@ export const getFechas= async (req, res)=>{
 }
 export const createFecha=async(req, res)=>{
     try {
-        const {nombre, dimensiones, peso, identi, direccion, ciudad, usuario }=req.body;
-        const newFecha=new Fechas({nombre, dimensiones, peso, identi, direccion, ciudad, usuario})
+        const {nombre, dimensiones, peso, identi, direccion,author, ciudad,
+            
+         }=req.body;
+        const newFecha=new Fechas({nombre, dimensiones, author, peso, identi, direccion, ciudad,
+            important,
+            user: user._id
+        })
         await newFecha.save();
         return res.json(newFecha);
 
